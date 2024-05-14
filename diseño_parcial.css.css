@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr auto;
+    align-items: center;
+    padding: 20px;
+    background-color:red;
+    color:white;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+   
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.destacados, .catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr ));
+    gap: 20px;
+    padding: 20px;
+}
+
+.destacados {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+ 
+    align-items: center; /* Centra las imágenes verticalmente */
+
+}
+
+
+.destacados .image {
+    width: 100%;
+}
+
+.destacados .image img {
+    width: 100%;
+    height: auto;
+    margin: center; /* Centra la imagen horizontalmente */
+}
+
+h1 img {
+    float: left; /* Alinea las imágenes a la izquierda */
+    width: 80px; /* Establece el ancho deseado de la imagen */
+    margin-left:  300px; /* Espacio entre el texto del enlace y la imagen */
+
+}
+
+footer {
+    background-color: red;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        grid-template-columns: auto 1fr;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul.show {
+        display: block;
+    }
+}
+
+
